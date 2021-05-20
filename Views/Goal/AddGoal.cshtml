@@ -1,0 +1,25 @@
+﻿@model Goal
+
+<form method="post">
+    <table>
+        <tr>
+            <th> Name: </th>
+            <td> <input asp-for="locationName" /> </td>
+        </tr>
+        <tr>
+            <th> Distance: </th>
+            <td> <input asp-for="distance" /> </td>
+        </tr>
+        <tr>
+            <th> Complete: </th>
+            <td> <input asp-for="complete" /> </td>
+        </tr>
+    </table>
+    <hr />
+    <!--<button asp-action="AddGoal" asp-route-id="@Model.goalId" class="btn btn-sm btn-outline-primary"> Add </button>-->
+    <input type="submit" value="Add Goal" class="btn btn-sm btn-success mr-1" />
+    <button asp-action="Index" formmethod="get" class="btn btn-sm btn-outline-primary">
+        Cancel
+    </button>
+</form>
+

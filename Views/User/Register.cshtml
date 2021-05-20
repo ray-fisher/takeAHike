@@ -1,0 +1,21 @@
+﻿@model takeAHike.Models.ViewModels.UserRegistrationViewModel
+
+<h1> Register New User </h1>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form method="post">
+    UserName (EMail Address):
+    <input asp-for="UserName" type="email" required />
+    <br />
+
+    Password:
+    <input asp-for="Password" type="password" required />
+    <br />
+
+    Verification Passsword:
+    <input asp-for="VerificationPassword" type="password" required />
+    <br />
+
+    <input type="submit" value="Register" />
+</form>

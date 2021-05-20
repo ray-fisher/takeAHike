@@ -1,0 +1,42 @@
+﻿@model IQueryable<Goal>
+@{
+    Layout = "_Layout";
+}
+<h4>Goals</h4>
+<form>
+    @if (Model != null)
+    {
+        @foreach (Goal g in Model)
+        {
+            @: <strong>Goal Id:</strong> @g.goalId
+            <br />
+            @: <strong>User Id:</strong> @g.UserId
+            <br />
+            @: <strong>Location Id:</strong> @g.locationId
+            <br />
+            @: <strong>Location Name:</strong> @g.locationName
+            <br />
+            @: <strong>Distance:</strong> @g.distance
+            <br />
+            @: <strong>Complete:</strong> @g.complete
+            <br />
+
+            <!-- Detail Goals-->
+            <a asp-controller="Goal" asp-action="DetailGoal" asp-route-id="@g.goalId" class="btn btn-sm btn-outline-primary">
+                Details
+            </a>
+            <!--Edit Goals-->
+            <a asp-controller="Goal" asp-action="EditGoal" asp-route-id="@g.goalId" class="btn btn-sm btn-outline-primary">
+                Edit Goals
+            </a>
+            <!--Delete Goals-->
+            <a asp-controller="Goal" asp-action="DeleteGoal" asp-route-id="@g.goalId" class="btn btn-sm btn-outline-primary">
+                Delete Goal
+            </a>
+            <hr />
+        }
+    }
+    </br>
+    <!--Add New Goals-->
+    <a asp-controller="Goal" asp-action="AddGoal" class="btn btn-sm btn-outline-primary">Add New Goal</a>
+</form>

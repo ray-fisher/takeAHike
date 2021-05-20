@@ -1,0 +1,20 @@
+﻿@model User
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Welcome </title>
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+
+<!--Welcome Page-->
+<body>
+    <div>
+        <h1> Welcome, @Model.Username!</h1> <br />
+        <center><img src="https://cdn.pixabay.com/photo/2021/01/27/06/55/nova-scotia-duck-tolling-retriever-5953890_960_720.jpg" /></center>
+        <h1>Start Your Journey <a asp-action="Index">Here</a></h1>
+    </div>
+</body>
+</html>

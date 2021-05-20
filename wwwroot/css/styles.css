@@ -1,0 +1,73 @@
+﻿body {
+    background: #9dc096;
+    font-family: 'Raleway', sans-serif;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.navigation li {
+    display: inline-block;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding: 2px;
+}
+
+    .navigation li:hover {
+        color: darkslategrey;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+#banner {
+    background-image: url("https://images.pexels.com/photos/6129457/pexels-photo-6129457.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 700px;
+    width: 100%;
+}
+
+    #banner .content h1 {
+        border: 2px solid darkslategrey;
+        position: relative;
+        color: #82AAAA;
+        top: 50px;
+        width: 400px;
+        margin: 0 auto;
+    }
+
+p {
+    color: darkslategrey !important;
+}
+
+h1 {
+    color: darkslategrey;
+    text-align: center;
+}
+
+table {
+    color: lightslategrey;
+    border: 2px solid darkslategrey;
+}
+
+form {
+    position: relative;
+    width: 740px;
+    height: 498px;
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+    background: #FFF url(background.jpg);
+    /* we create our grid */
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10em 1em 1em 1em;
+}

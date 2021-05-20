@@ -1,0 +1,41 @@
+﻿@model IQueryable<Location>
+@{
+    Layout = "_Layout";
+}
+<h4>Locations</h4>
+<form>
+    @if (Model != null)
+    {
+        @foreach (Location l in Model)
+        {
+
+            @: <strong>User Id:</strong> @l.UserId
+            <br />
+            @: <strong>Location Id:</strong> @l.locationId
+            <br />
+            @: <strong>Location Name:</strong> @l.locationName
+            <br />
+            @: <strong>Distance:</strong> @l.distance
+            <br />
+            @: <strong>Times Visited:</strong> @l.time
+            <br />
+            
+            <!-- Detail Location-->
+            <a asp-controller="Location" asp-action="DetailLocation" asp-route-id="@l.locationId" class="btn btn-sm btn-outline-primary">
+                Details
+            </a>
+            <!--Edit Location-->
+            <a asp-controller="Location" asp-action="EditLocation" asp-route-id="@l.locationId" class="btn btn-sm btn-outline-primary">
+                Edit Location
+            </a>
+            <!--Delete Location-->
+            <a asp-controller="Location" asp-action="DeleteLocation" asp-route-id="@l.locationId" class="btn btn-sm btn-outline-primary">
+                Delete Location
+            </a>
+            <hr />
+            }
+        }
+        </br>
+        <!--Add New Location-->
+        <a asp-controller="Location" asp-action="AddLocation" class="btn btn-sm btn-outline-primary">Add New Location</a>
+    </form>

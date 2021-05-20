@@ -1,0 +1,27 @@
+﻿@model Goal
+<!--View Goal-->
+<table>
+    <tr>
+        <th> Name: </th>
+        <td> @Model.locationName </td>
+    </tr>
+    <br />
+    <tr>
+        <th> Distance: </th>
+        <td>  @Model.distance </td>
+    </tr>
+    <br />
+    <tr>
+        <th> Complete:  </th>
+        <td>  @Model.complete </td>
+    </tr>
+</table>
+<hr />
+
+
+<!-- Links -->
+<a asp-controller="Goal" asp-action="EditGoal" asp-route-id="@Model.goalId" class="btn btn-sm btn-outline-warning mr-1 text-dark"> Edit </a>
+<a asp-controller="Goal" asp-action="DeleteGoal" asp-route-id="@Model.goalId" class="btn btn-sm btn-outline-danger ml-1 mr-1"> Delete </a>
+<a asp-action="Index" asp-route-productId="@Model.goalId" class="btn btn-sm btn-outline-primary">
+    Go Back
+</a>

@@ -1,0 +1,31 @@
+﻿@model Goal
+@{
+    Layout = "_Layout";
+}
+<form method="post">
+    <div asp-validation-summary="All">    </div>
+    <input type="hidden" asp-for="goalId" />
+    <table>
+        <tr>
+            <th> Name: </th>
+            <td> <input asp-for="locationName" /> </td>
+        </tr>
+        <tr>
+            <th> Distance: </th>
+            <td> <input asp-for="distance" /> </td>
+        </tr>
+        <tr>
+            <th> Complete: </th>
+            <td> <input asp-for="complete" /> </td>
+        </tr>
+        <tr>
+            <hr />
+        <tr>
+            <td class="text-center" colspan="2">
+                <input class="btn btn-sm btn-outline-warning mr-1 text-dark" type="submit" value="Save" />
+                <a asp-controller="Goal" asp-action="Index" asp-route-id="@Model.goalId" class="btn btn-sm btn-outline-primary ml-1"> Cancel </a>
+            </td>
+        </tr>
+        </tr>
+    </table>
+</form>

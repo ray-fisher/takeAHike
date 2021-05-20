@@ -1,0 +1,26 @@
+﻿@model Goal
+
+<tr>
+    <th> Name: </th>
+    <td> @Model.locationName </td>
+</tr>
+<tr>
+    <th> Distance: </th>
+    <td>  @Model.distance </td>
+</tr>
+<tr>
+    <th> Complete: </th>
+    <td>  @Model.complete </td>
+</tr>
+<hr />
+
+<h1> Are You Sure? </h1>
+<form method="post">
+    
+    <input type="hidden" asp-for="goalId" />
+    <input type="submit" value="Delete Location" class="btn btn-sm btn-warning">
+    <button asp-action="Index" formmethod="get" class="btn btn-sm btn-outline-primary">
+        Cancel
+    </button>
+</form>
+

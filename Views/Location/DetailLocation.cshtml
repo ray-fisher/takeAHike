@@ -1,0 +1,33 @@
+﻿@model Location
+
+<!DOCTYPE html>
+<meta charset="utf-8" />
+
+<head>
+    <title>My Locations</title>
+</head>
+
+
+<!--View Goal-->
+<table>
+    <tr>
+        <th> Name: </th>
+        <td> @Model.locationName </td>
+    </tr>
+    <tr>
+        <th> Distance: </th>
+        <td>  @Model.distance </td>
+    </tr>
+    <tr>
+        <th> Times Visited: </th>
+        <td> @Model.time  </td>
+    </tr>
+    <hr />
+ </table>
+
+    <!-- Links -->
+    <a asp-controller="Location" asp-action="EditLocation" asp-route-id="@Model.locationId" class="btn btn-sm btn-outline-warning mr-1 text-dark"> Edit </a>
+    <a asp-controller="Location" asp-action="DeleteLocation" asp-route-id="@Model.locationId" class="btn btn-sm btn-outline-danger ml-1 mr-1"> Delete </a>
+    <a asp-action="Index" asp-route-productId="@Model.locationId" class="btn btn-sm btn-outline-primary">
+        Go Back
+    </a>

@@ -1,0 +1,22 @@
+﻿@model Location
+<form method="post">
+    <table>
+        <tr>
+            <th> Name: </th>
+            <td> <input asp-for="locationName" /> </td>
+        </tr>
+        <tr>
+            <th> Distance: </th>
+            <td> <input asp-for="distance" /> </td>
+        </tr>
+        <tr>
+            <th> Times Visited: </th>
+            <td> <input asp-for="time" /> </td>
+        </tr>
+    </table>
+    <hr />
+    <input type="submit" value="Add Location" class="btn btn-sm btn-success mr-1" />
+    <button asp-action="Index" formmethod="get" class="btn btn-sm btn-outline-primary">
+        Cancel
+    </button>
+</form>
